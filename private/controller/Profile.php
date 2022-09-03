@@ -6,6 +6,8 @@ class Profile extends Controller
 {
     function index()
     {
-        $this->view('profile');
+        $db = new Database();
+        $data = $db->query("select * from users");
+        $this->view('profile',['rows' => $data]);
     }
 }

@@ -53,6 +53,12 @@
         </form>
     </nav>
 
+    
+<?php
+echo "<pre>";
+print_r($data['rows']);
+?>
+
 </div>
 
 

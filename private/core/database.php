@@ -1,6 +1,6 @@
 <?php
 
-// Database
+// Database Connection
 
 class Database
 {
@@ -28,10 +28,11 @@ class Database
                 }
 
                 if (is_array($data) && count($data) > 0) {
-                    return false;
+                    return $data;
                 }
             }
         }
+        return false;
     }
 }
 

@@ -6,8 +6,9 @@ class Home extends Controller
 {
     function index()
     {
-        $db = new Database();
-        $data = $db->query("select * from users");
+        $user = new User();
+
+        $data = $user->findAll();
         $this->view('home',['rows' => $data]);
     }
 }

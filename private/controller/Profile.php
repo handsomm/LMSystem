@@ -6,8 +6,9 @@ class Profile extends Controller
 {
     function index()
     {
-        $db = new Database();
-        $data = $db->query("select * from users");
+        
+        $user = $this->loadModel('User');
+        $data = $user->findAll();
         $this->view('profile',['rows' => $data]);
     }
 }

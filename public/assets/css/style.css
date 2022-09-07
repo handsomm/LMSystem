@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /* body {
@@ -12,18 +12,19 @@
   background-size: cover;
 } */
 
+/* Login and signup page style */
+
 body .blure {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-image: url(./img/3.jpg);
+  background-image: url(../img/3.jpg);
   background-size: cover;
 }
 
-
-body .blure{
+body .blure {
   height: 100vh;
   width: 100vw;
   background-color: #00000070;
@@ -60,10 +61,10 @@ form span {
 .cardBox h3 {
   color: #fff;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.5em;
   width: 100%;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -71,7 +72,7 @@ form span {
 .inputBox {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .inputBox span {
@@ -80,7 +81,7 @@ form span {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.70em;
+  font-size: 0.7em;
   border-left: 4px solid #fff;
   padding-left: 4px;
   line-height: 1em;
@@ -164,6 +165,8 @@ label input {
   color: #ff2c74;
 }
 
+/* Home page slider */
+
 #slider {
   overflow: hidden;
   position: relative;
@@ -188,14 +191,14 @@ label input {
   text-transform: capitalize;
 }
 
-.content h2 {
+#slider .content h2 {
   font-size: 60px;
 }
-.content h4 {
+#slider .content h4 {
   font-size: 25px;
 }
 
-.content h6 {
+#slider .content h6 {
   margin-top: 80px;
   color: red;
 }
@@ -205,7 +208,7 @@ label input {
   width: 500%;
   margin: 0;
   left: 0;
-  animation:  20s slider infinite;
+  animation: 20s slider infinite;
 }
 
 #slider figure img {
@@ -217,38 +220,38 @@ label input {
 }
 
 @keyframes slider {
-  0%{
-      left: 0;
+  0% {
+    left: 0;
   }
-  20%{
-      left: 0;
+  20% {
+    left: 0;
   }
-  25%{
-      left: -100%;
+  25% {
+    left: -100%;
   }
-  45%{
-      left: -100%;
+  45% {
+    left: -100%;
   }
-  50%{
-      left: -200%;
+  50% {
+    left: -200%;
   }
-  70%{
-      left: -200%;
+  70% {
+    left: -200%;
   }
-  75%{
-      left: -300%;
+  75% {
+    left: -300%;
   }
-  95%{
-      left: -300%;
+  95% {
+    left: -300%;
   }
-  97%{
-      left: -400%;
+  97% {
+    left: -400%;
   }
 }
 
-.contents {
+/* .contents {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */

@@ -26,6 +26,8 @@ class User extends Model
             $this->errors['password'] = "Password does not match";
         }
 
+        echo "Hello shibu";
+
 
         if(count($this->errors) == 0) {
             return true;

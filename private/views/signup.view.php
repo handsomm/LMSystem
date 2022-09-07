@@ -1,7 +1,7 @@
 <?php $this->view('includes/header'); ?>
 
 <?php
-// print_r($errors);
+print_r($errors);
 
 ?>
 

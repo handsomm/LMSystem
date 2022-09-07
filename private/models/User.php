@@ -7,7 +7,7 @@ class User extends Model
     public function validate($DATA) {
         $this->errors = array();
         // Check for firstname
-        if(!preg_match('/^[a-zA-Z]+$/', $DATA['firstname'])) {
+        if(empty($DATA['firstname']) || !preg_match('/^[a-zA-Z]+$/', $DATA['firstname'])) {
             $this->errors['firstname'] = "Only letters allowed";
         }
 
@@ -17,12 +17,12 @@ class User extends Model
         }
 
         // Check for email
-        if($DATA['password']) {
-            $this->errors['email'] = "Password does not match";
+        if(empty($DATA['email']) || !filter_var($DATA['email'], FILTER_VALIDATE_EMAIL)) {
+            $this->errors['email'] = "Email is not valid";
         }
 
         // Check for password
-        if($DATA['password'] != $DATA['password2']) {
+        if(empty($DATA['password']) || $DATA['password'] != $DATA['password2']) {
             $this->errors['password'] = "Password does not match";
         }
 

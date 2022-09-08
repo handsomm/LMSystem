@@ -6,17 +6,17 @@
     <div class="row">
         <div class="col-sm-4 col-md-3">
             <img src="<?= ASSETS ?>/img/user_male.jpg" alt="" class="border border-primary d-block mx-auto rounded-circle" style="width: 120px;">
-            <h3 class="text-center">Soumya</h3>
+            <h3 class="text-center"><?=Auth::getFirstname();?></h3>
         </div>
         <div class="col-sm-8 col-md-9 bg-light p-2">
             <table class="table table-hover table-striped table-bordered">
                 <tr>
                     <th>First Name:</th>
-                    <td>Soumya Ranjan</td>
+                    <td><?=Auth::getFirstname();?></td>
                 </tr>
                 <tr>
                     <th>Last Name:</th>
-                    <td>Behera</td>
+                    <td><?=Auth::getLastname();?></td>
                 </tr>
                 <tr>
                     <th>Gender:</th>
@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <th>Date Created:</th>
-                    <td>10/05/2022</td>
+                    <td><?=Auth::getDate();?></td>
                 </tr>
             </table>
         </div>

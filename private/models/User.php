@@ -4,6 +4,17 @@
 
 class User extends Model
 {
+    protected $allowedColumns = [
+        'firstname',
+        'lastname',
+        'email',
+        'password'
+    ]; 
+    protected $beforeInsert = [
+        'make_username',
+        'hash_passwoerd'
+    ];
+
     public function validate($DATA) {
         $this->errors = array();
         // Check for firstname
@@ -37,5 +48,15 @@ class User extends Model
             return true;
         }
         return false;
+    }
+
+    public function make_username()
+    {
+        return $data;
+    } 
+    
+    public function hash_passwoerd()
+    {
+        return $data;
     }
 }

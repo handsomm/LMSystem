@@ -8,12 +8,12 @@ class User extends Model
         $this->errors = array();
         // Check for firstname
         if(empty($DATA['firstname']) || !preg_match('/^[a-zA-Z]+$/', $DATA['firstname'])) {
-            $this->errors['firstname'] = "Only letters allowed";
+            $this->errors['firstname'] = "Only letters allowed in firstname";
         }
 
         // Check for lasttname
         if(!preg_match('/^[a-zA-Z]+$/', $DATA['lastname'])) {
-            $this->errors['lastname'] = "Only letters allowed";
+            $this->errors['lastname'] = "Only letters allowed in lastname";
         }
 
         // Check for email
@@ -24,6 +24,11 @@ class User extends Model
         // Check for password
         if(empty($DATA['password']) || $DATA['password'] != $DATA['password2']) {
             $this->errors['password'] = "Password does not match";
+        }
+
+        // Check for password length
+        if(strlen($DATA['password']) < 4) {
+            $this->errors['password'] = "Password must be 4 character";
         }
 
         

@@ -13,8 +13,8 @@ class Signup extends Controller
                 $arr['firstname'] = $_POST['firstname'];
                 $arr['lastname'] = $_POST['lastname'];
                 $arr['email'] = $_POST['email'];
-                $arr['date'] = date("y-m-d H:i:s");
-                $arr['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                // $arr['date'] = date("y-m-d H:i:s");
+                $arr['password'] = $_POST['password'];
                 $user->insert($arr);
                 $this->redirect('login');
             } else {

@@ -30,19 +30,18 @@ class Model extends Database
     public function insert($data)
     {
         // RTemove unwanted columns
-        if (!property_exists($this, 'allowedColumns')) {
+        if (property_exists($this, 'allowedColumns')) {
             foreach($data as $key => $column)
             {
                 if(!in_array($key, $this->allowedColumns))
                 {
                     unset($data[$key]);
                 }
-                $data = $this->$column($data);
             }
         }
         
         // Run function before insert
-        if (!property_exists($this, 'beforeInsert')) {
+        if (property_exists($this, 'beforeInsert')) {
             foreach($this->beforeInsert as $func)
             {
                 $data = $this->$func($data);

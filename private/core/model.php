@@ -29,7 +29,8 @@ class Model extends Database
 
     public function insert($data)
     {
-        // RTemove unwanted columns
+
+        // Remove unwanted columns
         if (property_exists($this, 'allowedColumns')) {
             foreach($data as $key => $column)
             {
@@ -37,6 +38,7 @@ class Model extends Database
                 {
                     unset($data[$key]);
                 }
+                
             }
         }
         

@@ -59,7 +59,7 @@ class User extends Model
 
     public function make_username($data)
     {
-
+        $data['username'] = strtolower($data['firstname']).$this->random_number(3);
         return $data;
     }
 
@@ -67,5 +67,17 @@ class User extends Model
     {
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
         return $data;
+    }
+
+    private function random_number($length)
+    {
+        $arry = array(0,1,2,3,4,5,6,7,8,9);
+        $text = "";
+        for($i = 0; $i<$length; $i++)
+        {
+            $random = rand(0, 9);
+            $text .=$arry[$random];
+        }
+        return $text;
     }
 }

@@ -20,7 +20,7 @@
                 </tr>
                 <tr>
                     <th>Gender:</th>
-                    <td>Male</td>
+                    <td><?=Auth::getGender();?></td>
                 </tr>
                 <tr>
                     <th>Date Created:</th>

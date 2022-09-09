@@ -34,6 +34,11 @@ class User extends Model
             $this->errors['email'] = "Email is not valid";
         }
 
+        // Check for email exist
+        if ($this->where('email', $DATA['email'])) {
+            $this->errors['email'] = "Email already exist";
+        }
+
         // Check for password
         if (empty($DATA['password']) || $DATA['password'] != $DATA['password2']) {
             $this->errors['password'] = "Password does not match";

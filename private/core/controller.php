@@ -15,15 +15,15 @@ class Controller
         }
     }
 
-    public function loadModel($model)
-    {
-        if(file_exists("../private/models/" . ucfirst($model) . ".php"))
-        {
-            require("../private/models/" . ucfirst($model) . ".php");
-            return $model = new $model();
-        }
-        return false;
-    }
+    // public function loadModel($model)
+    // {
+    //     if(file_exists("../private/models/" . ucfirst($model) . ".php"))
+    //     {
+    //         require("../private/models/" . ucfirst($model) . ".php");
+    //         return $model = new $model();
+    //     }
+    //     return false;
+    // }
 
     public function redirect($link) {
         header('location: '. ROOT . '/' . trim($link, '/'));

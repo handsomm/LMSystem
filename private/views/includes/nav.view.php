@@ -22,11 +22,10 @@
             User
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?=ROOT?>/login">Login</a></li>
             <li><a class="dropdown-item" href="<?=ROOT?>/profile">Profile</a></li>
             <li><a class="dropdown-item" href="#">Dashboard</a></li>
             <div class="dropdown-divider"></div>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" href="<?=ROOT?>/logout">Logout</a></li>
           </ul>
         </li>
       </ul>

@@ -6,8 +6,11 @@ class Profile extends Controller
 {
     function index()
     {
-        
-        $user = $this->loadModel('User');
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
+        $user = new User();
         $data = $user->findAll();
         $this->view('profile',['rows' => $data]);
     }

@@ -1,30 +1,156 @@
 <?php $this->view('includes/header'); ?>
-<?php $this->view('includes/nav'); ?>
+<aside>
+    <div class="top">
+        <div class="logo">
+            <img src="<?= ROOT ?>/assets/images/logo.png" alt="" />
+            <h2>LM<span class="danger">System</span></h2>
+        </div>
+        <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="<?= ROOT ?>/dashboard">
+            <span class="material-icons-sharp"> grid_view </span>
+            <h3>Dashboard</h3>
+        </a>
+        <a href="<?= ROOT ?>/profile" class="active">
+            <span class="material-icons-sharp"> person </span>
+            <h3>Profile</h3>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp"> contacts </span>
+            <h3>User Information</h3>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp"> library_books </span>
+            <h3>Manage Books</h3>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp"> auto_stories </span>
+            <h3>Issue Book</h3>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp"> mail_outline </span>
+            <h3>Messages</h3>
+            <span class="message-count">6</span>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp"> people </span>
+            <h3>Manage Users</h3>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp"> bookmark </span>
+            <h3>Issued Books</h3>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp"> request_quote </span>
+            <h3>Requested Books</h3>
+        </a>
+        <a href="<?= ROOT ?>/logout">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+        </a>
+    </div>
+</aside>
 
-<div class="container-fluid p-4 shadow mx-auto" style="max-width: 1000px;">
+<!-- END OF ASIDE -->
+<main>
+    <h1>Profile</h1>
+
+
+</main>
+
+<!-- END OF MAIN -->
+
+<div class="right">
+    <div class="top">
+        <button id="menu-btn">
+            <span class="material-icons-sharp"> menu </span>
+        </button>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active"> light_mode </span>
+            <span class="material-icons-sharp"> dark_mode </span>
+        </div>
+        <div class="profile">
+            <div class="info">
+                <p>Hey, <b><?= Auth::getFirstname(); ?></b></p>
+                <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+                <img src="<?= ROOT ?>/assets/images/profile-1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- END OF TOP -->
+    <div class="recent-updates">
+        <h2>Recent Updates</h2>
+        <div class="updates">
+            <div class="update">
+                <div class="profile-photo">
+                    <img src="<?= ROOT ?>/assets/images/profile-2.jpg" alt="">
+                </div>
+                <div class="message">
+                    <p><b>Shibu </b> received his order of Night lion tech GPS drone</p>
+                    <small class="text-muted">2 minutes ago</small>
+                </div>
+            </div>
+            <div class="update">
+                <div class="profile-photo">
+                    <img src="<?= ROOT ?>/assets/images/profile-3.jpg" alt="">
+                </div>
+                <div class="message">
+                    <p><b>Alina </b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <small class="text-muted">2 minutes ago</small>
+                </div>
+            </div>
+            <div class="update">
+                <div class="profile-photo">
+                    <img src="<?= ROOT ?>/assets/images/profile-4.jpg" alt="">
+                </div>
+                <div class="message">
+                    <p><b>Priyanka </b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
+                        velit.</p>
+                    <small class="text-muted">2 minutes ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END OF RECENT UPDATES -->
+
+</div>
+</div>
+</body>
+<script src="<?= ROOT ?>/assets/js/dashboard.js"></script>
+
+</html>
+
+
+<!-- <div class="container-fluid p-4 shadow mx-auto" style="max-width: 1000px;">
     <?php $this->view('includes/crumbs'); ?>
     <div class="row">
         <div class="col-sm-4 col-md-3">
             <img src="<?= ASSETS ?>/img/user_male.jpg" alt="" class="border border-primary d-block mx-auto rounded-circle" style="width: 120px;">
-            <h3 class="text-center"><?=Auth::getFirstname();?></h3>
+            <h3 class="text-center"><?= Auth::getFirstname(); ?></h3>
         </div>
         <div class="col-sm-8 col-md-9 bg-light p-2">
             <table class="table table-hover table-striped table-bordered">
                 <tr>
                     <th>First Name:</th>
-                    <td><?=Auth::getFirstname();?></td>
+                    <td><?= Auth::getFirstname(); ?></td>
                 </tr>
                 <tr>
                     <th>Last Name:</th>
-                    <td><?=Auth::getLastname();?></td>
+                    <td><?= Auth::getLastname(); ?></td>
                 </tr>
                 <tr>
                     <th>Gender:</th>
-                    <td><?=Auth::getGender();?></td>
+                    <td><?= Auth::getGender(); ?></td>
                 </tr>
                 <tr>
                     <th>Date Created:</th>
-                    <td><?=Auth::getDate();?></td>
+                    <td><?= Auth::getDate(); ?></td>
                 </tr>
             </table>
         </div>
@@ -47,19 +173,21 @@
     <nav class="navbar bg-light">
         <form class="ms-2" style="width: 350px;">
             <div class="input-group">
-                <span class="input-group-text" style="font-size: 24px; color:red;" id="basic-addon1"><ion-icon name="search"></ion-icon></span>
+                <span class="input-group-text" style="font-size: 24px; color:red;" id="basic-addon1">
+                    <ion-icon name="search"></ion-icon>
+                </span>
                 <input type="text" class="form-control" placeholder="Find info" aria-label="Username" aria-describedby="basic-addon1">
             </div>
         </form>
     </nav>
 
-    
-<?php
-echo "<pre>";
-print_r($data['rows']);
-?>
 
-</div>
+    <?php
+    echo "<pre>";
+    print_r($data['rows']);
+    ?>
+
+</div> -->
 
 
 <?php $this->view('includes/footer'); ?>

@@ -1,0 +1,138 @@
+@import url(./root.css);
+
+html {
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../img/3.jpg);
+    background-size: cover;
+}
+
+.container .cardBox {
+    position: relative;
+    width: 22rem;
+    min-height: 32rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2e3c4d;
+    box-shadow: 1.56rem 1.56rem 4.68rem rgba(0, 0, 0, 0.25),
+        0.6rem 0.6rem 4.3rem rgba(0, 0, 0, 0.25),
+        inset 0.32rem 0.32rem 0.6rem rgba(0, 0, 0, 0.5),
+        inset 0.32rem 0.32rem 0.6rem rgba(255, 255, 255, 0.2),
+        inset -0.32rem -0.32rem 0.93rem rgba(0, 0, 0, 0.75);
+    border-radius: var(--card-border-radius);
+    padding: 2rem 2.8rem;
+}
+
+.container .cardBox form {
+    position: relative;
+    width: 100%;
+}
+
+.container .cardBox form span {
+    color: #fff;
+}
+
+.cardBox h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.cardBox form>.inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.1rem;
+}
+
+.cardBox form>.inputBox label {
+    display: inline;
+    color: var(--color-white);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    font-size: 0.7rem;
+    border-left: 0.3rem solid #fff;
+    padding-left: 0.2rem;
+    line-height: 1rem;
+}
+
+.inputBox .box {
+    display: flex;
+}
+
+.inputBox .box .icon {
+    position: relative;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    background: #ff2c74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    border-radius: 50%;
+    margin-right: 0.62rem;
+    font-size: 1.2rem;
+    box-shadow: 0.32rem 0.32rem 0.4rem rgba(0, 0, 0, 0.25),
+        inset 0.17rem 0.17rem 0.32rem rgba(255, 255, 255, 0.25),
+        inset -0.2rem -0.2rem 0.32rem rgba(0, 0, 0, 0.5);
+}
+
+.inputBox .box input {
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+    box-shadow: 0.32rem 0.32rem 0.4rem rgba(0, 0, 0, 0.25),
+        inset 0.17rem 0.17rem 0.32rem rgba(0, 0, 0, 0.35),
+        inset -0.2rem -0.2rem 0.32rem rgba(0, 0, 0, 0.5);
+}
+
+.inputBox .box input[type="submit"] {
+    background: #1f83f2;
+    box-shadow: 0.32rem 0.32rem 0.4rem rgba(0, 0, 0, 0.25),
+        inset 0.17rem 0.17rem 0.32rem rgba(255, 255, 255, 0.25),
+        inset -0.2rem -0.2rem 0.32rem rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+}
+
+.inputBox .box input[type="submit"]:hover {
+    filter: brightness(1.1);
+}
+
+
+
+form .forgot {
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.062rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+form .forgot:hover {
+    color: #ff2c74;
+}

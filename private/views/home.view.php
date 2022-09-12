@@ -24,12 +24,6 @@
 
 </div> -->
 
-<div class="popup" id="popup">
-    <img src="<?= ROOT ?>/assets/img/success.png" width="80px">
-    <h2>Thank You</h2>
-    <p>Your details has been submitted successfully. Thanks!</p>
-    <button type="button" class="popbtn" onclick="closePopup()">OK</button>
-</div>
 
 <div class="hero" style="background: #000;">
     <nav>
@@ -37,7 +31,7 @@
         <ul>
             <li><a href="<?=ROOT?>/home">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="<?= ROOT ?>/dashboard">Dashboard</a></li>
             <li><a href="<?=ROOT?>/profile">Profile</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>

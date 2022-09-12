@@ -1,16 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:200&display=swap");
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-/* body {
-  background-image: url(./img/3.jpg);
-  background-size: cover;
-} */
 
 /* Login and signup page style */
 
@@ -20,7 +7,7 @@ body .blure {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/3.jpg);
+  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/3.jpg);
   background-size: cover;
 }
 
@@ -167,7 +154,7 @@ label input {
 
 /* Home page slider */
 
-#slider {
+/* #slider {
   overflow: hidden;
   position: relative;
 }
@@ -247,7 +234,7 @@ label input {
   97% {
     left: -400%;
   }
-}
+} */
 
 /* .contents {
   position: relative;

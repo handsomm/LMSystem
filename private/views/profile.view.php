@@ -1,6 +1,6 @@
 <?php $this->view('includes/header'); ?>
 
-<link rel="stylesheet" href="<?=ROOT?>/assets/css/profile.css">
+<link rel="stylesheet" href="<?= ROOT ?>/assets/css/profile.css">
 <aside>
     <div class="top">
         <div class="logo">
@@ -58,18 +58,24 @@
 
 <!-- END OF ASIDE -->
 <main>
-<div class="top">
-		<h1>Profile</h1>
+    <div class="top">
+        <h1>Profile</h1>
 
-		<ul class="breadcumbs">
-			<li class="breadcumb_item">
-				<a href="#" class="breadcumb_link text-muted">Home</a>
-			</li>
-			<li class="breadcumb_item">
-				<a href="#" class="breadcumb_link text-muted breadcumb_link_active">Profile</a>
-			</li>
-		</ul>
-	</div>
+        <ul class="breadcumbs">
+            <li class="breadcumb_item">
+                <a href="#" class="breadcumb_link text-muted">Home</a>
+            </li>
+            <li class="breadcumb_item">
+                <a href="#" class="breadcumb_link text-muted breadcumb_link_active">Profile</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="profile">
+
+
+    
+    </div>
 
 
 </main>

@@ -13,7 +13,7 @@
 
     <!-- <link rel="stylesheet" href="<?= ROOT ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/stylee.css"> -->
-    <link rel="stylesheet" href="<?= ROOT ?>/assets/css/dashboard.css">
+    <link rel="stylesheet" href="<?= ROOT ?>/assets/css/root.css">
 
     <!-- Material Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />

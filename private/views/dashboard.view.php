@@ -1,4 +1,5 @@
 <?php $this->view('includes/header'); ?>
+<link rel="stylesheet" href="<?=ROOT?>/assets/css/dashboard.css">
 <aside>
 	<div class="top">
 		<div class="logo">
@@ -56,7 +57,15 @@
 
 <!-- END OF ASIDE -->
 <main>
-	<h1>Dashboard</h1>
+	<div class="top">
+		<h1>Dashboard</h1>
+
+		<ul class="breadcumbs">
+			<li class="breadcumb_item">
+				<a href="#" class="breadcumb_link text-muted breadcumb_link_active">Home</a>
+			</li>
+		</ul>
+	</div>
 
 	<div class="date">
 		<input type="date">

@@ -71,10 +71,52 @@
         </ul>
     </div>
 
-    <div class="profile">
-
-
-    
+    <div class="profile_section">
+        <div class="profile_photo">
+            <img src="<?= ROOT ?>/assets/images/profile-1.jpg" alt="">
+            <h2><?= Auth::getFirstname(); ?> <?= Auth::getLastname(); ?></h2>
+            <!-- <p class="text-muted">Admin</p> -->
+        </div>
+        <div class="details">
+            <h1>Details</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>:</td>
+                    <td><?= Auth::getFirstname(); ?> <?= Auth::getLastname(); ?></th>
+                </tr>
+                <tr>
+                    <th>Roll</th>
+                    <td>:</td>
+                    <td>ICT/22/21</th>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td>:</td>
+                    <td><?= Auth::getUsername(); ?></th>
+                </tr>
+                <tr>
+                    <th>Semester</th>
+                    <td>:</td>
+                    <td>3rd</th>
+                </tr>
+                <tr>
+                    <th>Session</th>
+                    <td>:</td>
+                    <td>21-23</th>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>:</td>
+                    <td><?= Auth::getEmail(); ?></th>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td>:</td>
+                    <td>8917571207</th>
+                </tr>
+            </table>
+        </div>
     </div>
 
 

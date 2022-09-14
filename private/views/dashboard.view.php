@@ -1,5 +1,5 @@
 <?php $this->view('includes/header'); ?>
-<link rel="stylesheet" href="<?=ROOT?>/assets/css/dashboard.css">
+<link rel="stylesheet" href="<?= ROOT ?>/assets/css/dashboard.css">
 <aside>
 	<div class="top">
 		<div class="logo">
@@ -81,12 +81,93 @@
 				</div>
 				<div class="progress">
 					<svg>
+						<defs>
+							<linearGradient id="GradientColor">
+								<stop offset="0%" stop-color="#e91e63" />
+								<stop offset="100%" stop-color="#673ab7" />
+							</linearGradient>
+						</defs>
 						<circle cx="38" cy="38" r="36"></circle>
 					</svg>
 					<div class="number">
-						<p>81%</p>
+						<p id="perM"></p>
 					</div>
 				</div>
+				<!-- <style>
+					.skill {
+						position: relative;
+						width: 92px;
+						height: 92px;
+						/* background: cornflowerblue; */
+					}
+
+					.outer {
+						width: 92px;
+						height: 92px;
+						border-radius: 50%;
+						box-shadow: 3px 3px 6px -1px rgba(0, 0, 0, 0.15),
+							-3px -3px 6px -1px rgba(0, 0, 0, 0.15);
+						padding: 5px;
+					}
+
+					.inner {
+						width: 82px;
+						height: 82px;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						box-shadow: inset 3px 3px 4px -1px rgba(0, 0, 0, 0.15),
+							inset -3px -3px 4px -1px rgba(0, 0, 0, 0.15);
+						/* -.5px -.5px 0px rgba(255, 255, 255, 1),
+                .5px .5px 0px rgba(255, 255, 255, .15),
+                0px 12px 10px -8px rgba(0, 0, 0, 0.05); */
+					}
+
+					#number {
+						font-weight: 600;
+						color: #555;
+					}
+
+					main .skill circle {
+						fill: none;
+						stroke: url(#GradientColor);
+						stroke-width: 5;
+						stroke-dasharray: 270;
+						stroke-dashoffset: 270;
+						animation: anim 2s linear forwards;
+					}
+
+					svg {
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+
+					@keyframes anim {
+						100% {
+							stroke-dashoffset: 48.6;
+						}
+					}
+				</style> -->
+				<!-- <div class="skill">
+					<div class="outer">
+						<div class="inner">
+							<div id="number">
+
+							</div>
+							<svg>
+								<defs>
+									<linearGradient id="GradientColor">
+										<stop offset="0%" stop-color="#e91e63" />
+										<stop offset="100%" stop-color="#673ab7" />
+									</linearGradient>
+								</defs>
+								<circle cx="46" cy="46" r="43" stroke-linecap="round" />
+							</svg>
+						</div>
+					</div>
+				</div> -->
 			</div>
 			<small class="text-muted">Last 24 Hours</small>
 		</div>
@@ -98,12 +179,30 @@
 					<h3>Total Books</h3>
 					<h1>34</h1>
 				</div>
+				<!-- <div class="skill">
+					<div class="outer">
+						<div class="inner">
+							<div id="number">
+
+							</div>
+							<svg>
+								<defs>
+									<linearGradient id="GradientColor">
+										<stop offset="0%" stop-color="#e91e63" />
+										<stop offset="100%" stop-color="#673ab7" />
+									</linearGradient>
+								</defs>
+								<circle cx="46" cy="46" r="43" stroke-linecap="round" />
+							</svg>
+						</div>
+					</div>
+				</div> -->
 				<div class="progress">
 					<svg>
 						<circle cx="38" cy="38" r="36"></circle>
 					</svg>
 					<div class="number">
-						<p>62%</p>
+						<p>67%</p>
 					</div>
 				</div>
 			</div>
@@ -337,5 +436,19 @@
 		</div>
 	</div>
 </div>
+
+<!-- <script>
+	let number = document.getElementById('number');
+	let counter = 0;
+	setInterval(() => {
+		if (counter == 81) {
+			clearInterval();
+		} else {
+			counter += 1;
+			number.innerHTML = counter + "%";
+			number.classList.add('text-muted')
+		}
+	}, 20);
+</script> -->
 
 <?php $this->view('includes/footer'); ?>

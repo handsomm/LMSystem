@@ -425,7 +425,7 @@ main table tr:last-child th {
 
 @media screen and (max-width:768px) {
     .container {
-        width: 100%;
+        width: 95%;
         grid-template-columns: 1fr;
     }
 

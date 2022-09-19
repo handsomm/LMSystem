@@ -1,56 +1,10 @@
 <?php $this->view('includes/header'); ?>
 <link rel="stylesheet" href="<?= ROOT ?>/assets/css/login.css">
 
-<style>
-    .popup input {
-        position: relative;
-        width: 50%;
-        border: none;
-        outline: none;
-        padding: 10px 20px;
-        border-radius: 30px;
-        letter-spacing: 1px;
-        font-size: 0.85em;
-        text-align: center;
-        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
-            inset 2px 2px 5px rgba(0, 0, 0, 0.35),
-            inset -3px -3px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .popup .popbtn {
-        width: 60%;
-        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
-            inset 2px 2px 5px rgba(0, 0, 0, 0.35);
-        border-radius: 30px;
-    }
-
-    .popup .popbtn:hover {
-        filter: brightness(1.1);
-    }
-</style>
-
-<!-- <div class="popup" id="popup">
-    <img src="<?= ROOT ?>/assets/img/success.png" width="80px">
-    <h2>Thank You</h2>
-    <p>Your details has been submitted successfully. Thanks!</p>
-    <button type="button" class="popbtn" onclick="closePopup()">OK</button>
-</div> -->
 
 <div class="cardBox">
     <form action="" method="POST">
         <h3>Sign Up</h3>
-
-        <!-- Show the error messages -->
-        <?php if (count($errors) > 0) : ?>
-            <div style="font-size: 12px;" id="alert" class="alert  alert-warning alert-dismissible fade show" data-auto-dismis="2000" role="alert">
-                <strong><small>Errors:</small></strong>
-                <?php foreach ($errors as $error) : ?>
-                    <br><small><?= $error ?></small>
-                <?php endforeach; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
-
 
         <div class="inputBox">
             <label>First Name</label>
@@ -112,14 +66,21 @@
     </form>
 </div>
 
+<!-- Show the error messages -->
+<div class="noty">
+    <?php if (count($errors) > 0) : ?>
+        <?php foreach ($errors as $error) : ?>
+            <div class="alert hide">
+                <span class="fas fa-circle-exclamation icon"></span>
+                <span class="msg" id="msg"><?= $error ?></span>
+                <span class="close_btn">
+                    <span class="fas fa-times"></span>
+                </span>
+            </div>
+        <?php endforeach ?>
+    <?php endif ?>
+</div>
 
-<script type="text/javascript">
-    setTimeout(function() {
-
-        // Closing the alert
-        $('#alert').alert('close');
-    }, 3000);
-</script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <?php $this->view('includes/footer'); ?>

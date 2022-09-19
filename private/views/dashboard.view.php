@@ -90,7 +90,7 @@
 						<circle cx="38" cy="38" r="36"></circle>
 					</svg>
 					<div class="number">
-						<p id="perM"></p>
+						<p>81%</p>
 					</div>
 				</div>
 				<!-- <style>

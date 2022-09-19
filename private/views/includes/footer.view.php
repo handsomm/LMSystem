@@ -4,15 +4,20 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script> -->
 
 <script>
-    let popup = document.getElementById('popup');
+	$().ready(function(){
+		$('.alert').removeClass('hide');
+		$('.alert').addClass('show');
+		$('.alert').addClass('showAlert');
+		setTimeout(function(){
+			$('.alert').removeClass('show');
+			$('.alert').addClass('hide');
+		}, 3000);
+	});
 
-    function openPopup() {
-        popup.classList.add("open-popup");
-    }
-
-    function closePopup() {
-        popup.classList.remove("open-popup");
-    }
+	$('.close_btn').click(function(){
+		$('.alert').removeClass('show');
+		$('.alert').addClass('hide');
+	});
 </script>
 </body>
 

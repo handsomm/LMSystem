@@ -4,7 +4,7 @@
 
 <div class="cardBox">
     <form action="" method="POST">
-        <h3>Sign Up</h3>
+        <h3>Add User</h3>
 
         <div class="inputBox">
             <label>First Name</label>

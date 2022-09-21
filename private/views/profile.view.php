@@ -1,59 +1,58 @@
 <?php $this->view('includes/header'); ?>
-
 <link rel="stylesheet" href="<?= ROOT ?>/assets/css/profile.css">
 <aside>
-    <div class="top">
-        <div class="logo">
-            <img src="<?= ROOT ?>/assets/images/logo.png" alt="" />
-            <h2>LM<span class="danger">System</span></h2>
-        </div>
-        <div class="close" id="close-btn">
-            <span class="material-icons-sharp"> close </span>
-        </div>
-    </div>
-    <div class="sidebar">
-        <a href="<?= ROOT ?>/dashboard">
-            <span class="material-icons-sharp"> grid_view </span>
-            <h3>Dashboard</h3>
-        </a>
-        <a href="<?= ROOT ?>/profile" class="active">
-            <span class="material-icons-sharp"> person </span>
-            <h3>Profile</h3>
-        </a>
-        <a href="#">
-            <span class="material-icons-sharp"> contacts </span>
-            <h3>User Information</h3>
-        </a>
-        <a href="#">
-            <span class="material-icons-sharp"> library_books </span>
-            <h3>Manage Books</h3>
-        </a>
-        <a href="#">
-            <span class="material-icons-sharp"> auto_stories </span>
-            <h3>Issue Book</h3>
-        </a>
-        <a href="#">
-            <span class="material-icons-sharp"> mail_outline </span>
-            <h3>Messages</h3>
-            <span class="message-count">6</span>
-        </a>
-        <a href="#">
+	<div class="top">
+		<div class="logo">
+			<img src="<?= ROOT ?>/assets/images/logo.png" alt="" />
+			<h2>LM<span class="danger">System</span></h2>
+		</div>
+		<div class="close" id="close-btn">
+			<span class="material-icons-sharp"> close </span>
+		</div>
+	</div>
+	<div class="sidebar">
+		<a href="<?= ROOT ?>/dashboard">
+			<span class="material-icons-sharp"> grid_view </span>
+			<h3>Dashboard</h3>
+		</a>
+		<a href="<?= ROOT ?>/profile"  class="active">
+			<span class="material-icons-sharp"> person </span>
+			<h3>Profile</h3>
+		</a>
+		<a href="<?= ROOT ?>/users">
             <span class="material-icons-sharp"> people </span>
             <h3>Manage Users</h3>
         </a>
-        <a href="#">
-            <span class="material-icons-sharp"> bookmark </span>
-            <h3>Issued Books</h3>
-        </a>
-        <a href="#">
-            <span class="material-icons-sharp"> request_quote </span>
-            <h3>Requested Books</h3>
-        </a>
-        <a href="<?= ROOT ?>/logout">
-            <span class="material-icons-sharp"> logout </span>
-            <h3>Logout</h3>
-        </a>
-    </div>
+		<a href="#">
+			<span class="material-icons-sharp"> library_books </span>
+			<h3>Manage Books</h3>
+		</a>
+		<a href="#">
+			<span class="material-icons-sharp"> auto_stories </span>
+			<h3>Issue Book</h3>
+		</a>
+		<a href="#">
+			<span class="material-icons-sharp"> mail_outline </span>
+			<h3>Messages</h3>
+			<span class="message-count">6</span>
+		</a>
+		<a href="#">
+			<span class="material-icons-sharp"> people </span>
+			<h3>Manage Users</h3>
+		</a>
+		<a href="#">
+			<span class="material-icons-sharp"> bookmark </span>
+			<h3>Issued Books</h3>
+		</a>
+		<a href="#">
+			<span class="material-icons-sharp"> request_quote </span>
+			<h3>Requested Books</h3>
+		</a>
+		<a href="<?= ROOT ?>/logout">
+			<span class="material-icons-sharp"> logout </span>
+			<h3>Logout</h3>
+		</a>
+	</div>
 </aside>
 
 <!-- END OF ASIDE -->
@@ -181,74 +180,18 @@
     <!-- END OF RECENT UPDATES -->
 
 </div>
-</div>
-</body>
-<script src="<?= ROOT ?>/assets/js/dashboard.js"></script>
-
-</html>
-
-
-<!-- <div class="container-fluid p-4 shadow mx-auto" style="max-width: 1000px;">
-    <?php $this->view('includes/crumbs'); ?>
-    <div class="row">
-        <div class="col-sm-4 col-md-3">
-            <img src="<?= ASSETS ?>/img/user_male.jpg" alt="" class="border border-primary d-block mx-auto rounded-circle" style="width: 120px;">
-            <h3 class="text-center"><?= Auth::getFirstname(); ?></h3>
-        </div>
-        <div class="col-sm-8 col-md-9 bg-light p-2">
-            <table class="table table-hover table-striped table-bordered">
-                <tr>
-                    <th>First Name:</th>
-                    <td><?= Auth::getFirstname(); ?></td>
-                </tr>
-                <tr>
-                    <th>Last Name:</th>
-                    <td><?= Auth::getLastname(); ?></td>
-                </tr>
-                <tr>
-                    <th>Gender:</th>
-                    <td><?= Auth::getGender(); ?></td>
-                </tr>
-                <tr>
-                    <th>Date Created:</th>
-                    <td><?= Auth::getDate(); ?></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <hr>
-    <div class="container-fluid">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Basic Info</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Classes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tests</a>
-            </li>
-        </ul>
-    </div>
-
-    <nav class="navbar bg-light">
-        <form class="ms-2" style="width: 350px;">
-            <div class="input-group">
-                <span class="input-group-text" style="font-size: 24px; color:red;" id="basic-addon1">
-                    <ion-icon name="search"></ion-icon>
-                </span>
-                <input type="text" class="form-control" placeholder="Find info" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-        </form>
-    </nav>
-
-
-    <?php
-    echo "<pre>";
-    print_r($data['rows']);
-    ?>
-
-</div> -->
-
+<!-- <script>
+	let number = document.getElementById('number');
+	let counter = 0;
+	setInterval(() => {
+		if (counter == 81) {
+			clearInterval();
+		} else {
+			counter += 1;
+			number.innerHTML = counter + "%";
+			number.classList.add('text-muted')
+		}
+	}, 20);
+</script> -->
 
 <?php $this->view('includes/footer'); ?>

@@ -13,6 +13,6 @@ class Users extends Controller
         $user = new User();
 
         $data = $user->findAll();
-        $this->view('home',['rows' => $data]);
+        $this->view('users',['rows' => $data]);
     }
 }

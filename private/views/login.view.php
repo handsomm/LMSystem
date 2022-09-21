@@ -34,7 +34,6 @@
         </div>
 
         <a href="#" class="forgot"> Forgot Password</a><br>
-        <span>Don't have an account |<a href="<?= ROOT ?>/signup" class="forgot" style="color: #ff2c74;"> Signup </a></span>
         <span style="display: block;">Back to home |<a href="<?= ROOT ?>" class="forgot" style="color: #ff2c74;"> Home </a></span>
     </form>
 </div>

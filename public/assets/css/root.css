@@ -105,6 +105,12 @@ small {
     border-radius: 50%;
     overflow: hidden;
 }
+.profile-photo-l {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 .text-muted {
     color: var(--color-info-dark);

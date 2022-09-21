@@ -60,11 +60,13 @@
 	<div class="top">
 		<h1>Dashboard</h1>
 
-		<ul class="breadcumbs">
+		<!-- <ul class="breadcumbs">
 			<li class="breadcumb_item">
 				<a href="#" class="breadcumb_link text-muted breadcumb_link_active">Home</a>
 			</li>
-		</ul>
+		</ul> -->
+
+		<?php $this->view('includes/crumbs'); ?>
 	</div>
 
 	<div class="date">
